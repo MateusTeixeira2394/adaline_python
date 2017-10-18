@@ -21,7 +21,7 @@ def functiony(u):
     if u >= 0:
         return 1
     else:
-        return 0
+        return -1
 
 def calculate_eqm(table,weights):
     eqm = 0.0
@@ -74,8 +74,6 @@ def train(table,weights,n,iteration,e):
 
         print str(math.sqrt((round(eqm_after,2) - round(eqm_before,2))**2))+" <= "+str(e)
         print ""
-
-        pdb.set_trace()
 
         if math.sqrt((eqm_after - eqm_before)**2) <= e:
             unprepared = False
